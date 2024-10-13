@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/inex.css">
+</head>
+<body>
+    <header>
+        <h1>HardSoluciones</h1>
+    </header>
+    <section class="contenedor">
+        <div class="carta">
+            <h2>Formulario de Producto</h2>
+            <form id="formulario">
+                <label for="marca">Marca:</label>
+                <select id="marca" name="marca" required>
+                    <option value="" disabled selected>Seleccionar marca</option>
+                    <option value="AMD">AMD</option>
+                    <option value="Nvidia">Nvidia</option>
+                    <option value="Intel">Intel</option>
+                </select>
+
+                <label for="nombre-producto">Producto:</label>
+                <select id="nombre-producto" name="nombre-producto" required>
+                    <option value="" disabled selected>Seleccionar producto</option>
+                </select>
+
+                <label for="precio">Precio:</label>
+                <input type="text" id="precio" name="precio" readonly>
+                
+                <button type="button">Agregar</button>
+            </form>
+        </div>
+    </section>
+    <div class="tabla">
+        <table id="tabla-productos">
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <button id="borrador-tabla">Borrar Carrito</button>
+        <button id="terminarCompra">Terminar Compra</button>
+        <div class="total">
+            <strong>Total:</strong> <span id="precio-Total">0.00</span>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./JS/index.js"></script>
+</body>
+</html>
